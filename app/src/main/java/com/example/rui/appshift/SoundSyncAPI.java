@@ -415,11 +415,9 @@ public class SoundSyncAPI {
                 String xxx = EntityUtils.toString(response.getEntity());
                 JSONObject jsonObject = (JSONObject) new JSONTokener(xxx).nextValue();
                 JSONObject tt=jsonObject.getJSONObject("playlist");
-                String i=tt.getString("id");
                 String name=tt.getString("name");
 
-                Log.e("LOGTAH", i+"/"+name);
-                return i+"/"+name;
+                return name;
 
             }
         } catch (URISyntaxException e) {
